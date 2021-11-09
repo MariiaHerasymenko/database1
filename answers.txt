@@ -1,0 +1,27 @@
+1. select region, count(witness_id) from raw_input group by region order by count(*) desc limit 1;
++--------------+-------------------+
+| region       | count(witness_id) |
++--------------+-------------------+
+| Europe/Minsk |              3347 |
++--------------+-------------------+
+
+2. select region, count(witness_id) from raw_input group by region order by count(*) asc limit 1;
++-------------------+-------------------+
+| region            | count(witness_id) |
++-------------------+-------------------+
+| Europe/Zaporozhye |               507 |
++-------------------+-------------------+
+
+3. select time_of_day, count(witness_id) from raw_input group by time_of_day order by count(*) desc limit 1;
++-------------+-------------------+
+| time_of_day | count(witness_id) |
++-------------+-------------------+
+| day         |              5061 |
++-------------+-------------------+
+
+4. select count(distinct location_id) from raw_input;
++-----------------------------+
+| count(distinct location_id) |
++-----------------------------+
+|                         165 |
++-----------------------------+
